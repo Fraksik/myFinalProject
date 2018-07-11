@@ -1381,10 +1381,12 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 100px;
-  transition: box-shadow 0.7s; }
+  transition: box-shadow 0.7s;
+  outline: none; }
   .sp-cart-button:hover {
     text-decoration: none;
-    box-shadow: 0 0 2px 2px #222222; }
+    box-shadow: 0 0 2px 2px #222222;
+    cursor: pointer; }
   .sp-cart-button:active {
     filter: invert(10%); }
   .sp-cart-button span {

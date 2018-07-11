@@ -20,6 +20,17 @@ $(document).ready(function () {
 
     });
 
+    $('.sp-cart-button').on('click', function () {
+        let $good = $(this).parent();
+        let $title = $good.children().find('h4').text();
+        let $price = parseInt($good.attr('data-price'));
+        let $id = parseInt($good.attr('data-id'));
+        let $image = $good.attr('data-img');
+        console.log($good)
+        $myCart.addProduct($title, $price, $id, $image, '#');
+
+    });
+
     $('.cart-products-list').on('click', 'div.cart-model > div.cart-del', function () {
         $myCart.removeProduct(parseInt($(this).parent().attr('data-id')));
     });
