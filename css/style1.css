@@ -144,10 +144,15 @@
     justify-content: space-between;
     border-bottom: 1px solid #e8e8e8;
     margin-bottom: 16px; }
+    .cart-products-list .cart-model .cart-image-min {
+      width: 72px !important;
+      height: 85px !important; }
     .cart-products-list .cart-model .cart-text {
       display: flex;
-      padding-top: 5px;
+      padding: 5px 10px 0 10px;
       flex-direction: column; }
+    .cart-products-list .cart-model .product-box {
+      display: flex; }
     .cart-products-list .cart-model .cart-img {
       margin-bottom: 16px;
       border: 1px solid #ffffff;
@@ -180,8 +185,7 @@
     .cart-products-list .cart-model .cart-del {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
-      margin-left: 40px;
+      width: 10px;
       color: #c0c0c0;
       font-size: 16px; }
       .cart-products-list .cart-model .cart-del a {
@@ -1927,6 +1931,8 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    outline: none;
     width: 123px;
     height: 39px;
     border: 1px solid #ffffff;
@@ -1934,7 +1940,7 @@ html {
     background-color: rgba(255, 255, 255, 0); }
     .model-add .push img {
       margin-right: 8px; }
-    .model-add .push p {
+    .model-add .push span {
       color: #ffffff;
       font-size: 13px;
       font-weight: 700;
@@ -1943,7 +1949,7 @@ html {
       box-shadow: 0 5px 8px 0 #222222;
       background: #222224;
       transition: 0.5s; }
-      .model-add .push:hover p {
+      .model-add .push:hover span {
         color: #fff; }
     .model-add .push:active {
       box-shadow: 0 2px 2px 0 #ffffff; }

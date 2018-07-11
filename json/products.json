@@ -1,0 +1,20 @@
+{
+  "result": "1",
+  "cart": [
+    {
+      "title": "Rebox Zane - 1",
+      "price": 200,
+      "id": 9,
+      "img": "img/cart-model-2.png",
+      "link": "#"
+    },
+    {
+      "title": "Rebox Zane - 2",
+      "price": 250,
+      "id": 10,
+      "img": "img/cart-model-1.png",
+      "link": "#"
+    }
+  ],
+  "amount": 450
+}
