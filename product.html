@@ -12,6 +12,7 @@
 	<script src="jquery/jquery-ui.min.js"></script>
 	<script src="js/addGoodToCart.js"></script>
 	<script src="js/cart.js"></script>
+	<script src="js/rangeSlider.js"></script>
 	<script src="js/main.js"></script>
 	<title>Product</title>
 </head>
@@ -268,12 +269,15 @@
 						</div>
 					</div>
 					<div class="top-filter-right">
-						<!-- TODO: добавить двойной бегунок-->
-						<form oninput="result.value = rprice.valueAsNumber">
-							<label for="price">Price</label> <br>
-							<input name="rprice" type="range" id="price" value="400" step="1" min="0"
-							       max="1000"><br>
-							<span>$<output name="result" for="price">400</output></span>
+						<form>
+							<label>Price</label>
+							<br><br>
+							<div id="productsSlider"></div>
+							<br>
+							<div id="inputContainerForProductsSlider">
+								<input type="text" id="minCostProductsSlider" value="$88"/>
+								<input type="text" id="maxCostProductsSlider" value="$400"/>
+							</div>
 						</form>
 					</div>
 				</div>
