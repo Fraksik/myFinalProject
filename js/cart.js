@@ -95,19 +95,22 @@ class Cart {
         for (let k = 0; k < this.cartProducts.length; k++) {
 
             let item = this.cartProducts[k];
+            let itemId = item.id;
+            let findProductInCart = $(`[data-id = ${item.id}]`);
 
-            let createNewProduct = new AddGoodToCart(item.title, item.price, item.id, item.img, item.link);
+
+            let createNewProduct = new AddGoodToCart(item.title, item.price, itemId, item.img, item.link);
 
             if (productInCart.length === 0) {
                 createNewProduct.run(this.$cartBox);
-                productInCart.push(item.id);
+                productInCart.push(itemId);
             } else {
-                if (productInCart.indexOf(item.id) !== -1) {
-                    let $elementPrice = $(`[data-id = ${item.id}]`)[0].dataset.price;
-                    let $elementCount = parseInt($(`[data-id = ${item.id}]`)[0].dataset.count);
+                if (productInCart.indexOf(itemId) !== -1) {
+                    let $elementPrice = findProductInCart[0].dataset.price;
+                    let $elementCount = parseInt(findProductInCart[0].dataset.count);
 
-                    $(`[data-id = ${item.id}]`)[0].dataset.count = $elementCount + 1;
-                    $(`[data-id = ${item.id}]`)[0]
+                    findProductInCart[0].dataset.count = $elementCount + 1;
+                    findProductInCart[0]
                         .children[0]
                         .children[1]
                         .children[2]
@@ -115,7 +118,7 @@ class Cart {
 
                 } else {
                     createNewProduct.run(this.$cartBox);
-                    productInCart.push(item.id);
+                    productInCart.push(itemId);
                 }
             }
         }
